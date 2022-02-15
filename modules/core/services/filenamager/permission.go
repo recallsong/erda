@@ -72,7 +72,7 @@ func (p *provider) checkScopeID(ctx context.Context, req interface{}) (string, e
 	if r.GetScope() == "org" {
 		return p.checkOrgScopeID(r.GetContainerID(), r.GetHostIP(), permission.ScopeOrg, setInstance)
 	}
-	return p.checkOrgScopeID(r.GetContainerID(), r.GetHostIP(), permission.ScopeOrg, setInstance)
+	return p.checkOrgScopeID(r.GetContainerID(), r.GetHostIP(), permission.ScopeApp, setInstance)
 }
 
 type reuqestForPermission interface {
